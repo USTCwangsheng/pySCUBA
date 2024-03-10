@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: pySCUBA
+Version: 0.0.1
+Summary:  
+Author: yhh
+Author-email: yuhh@mail.ustc.edu.cn
+License-File: LICENSE
+License-File: LICENSE.md
+Requires-Dist: numpy

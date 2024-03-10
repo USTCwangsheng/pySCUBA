@@ -1,0 +1,8 @@
+set(SPL_SOURCE_FILES pb_designseq.cpp)
+add_library(designseq ${SPL_SOURCE_FILES})
+#target_link_libraries(designseq ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(designseq ${PYTHON_LIBRARIES})
+set_target_properties(designseq PROPERTIES PREFIX "")
+file(GLOB USER_CPP ${MY_ROOT}/designseq/src/*.cpp)
+pybind11_add_module(pb_designseq pb_designseq.cpp ${SPL_SOURCE_FILES} ${USER_CPP})
+target_link_libraries(pb_designseq PRIVATE ${ALL_LIBS})

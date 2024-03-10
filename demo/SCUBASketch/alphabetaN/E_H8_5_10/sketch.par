@@ -1,0 +1,7 @@
+START SketchPar
+SketchFile = E_H8_5_10.txt
+LinkLoop = 1
+RandomSeed = 123
+OutputFile = E_H8_5_10_
+GenerationNumber = 3
+END SketchPar

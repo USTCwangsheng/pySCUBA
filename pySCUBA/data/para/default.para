@@ -1,0 +1,25 @@
+//these four parameters define the vdw weight for residues with different SAI
+//wt = SurfWT + (CoreWT - SurfWT)/(1+exp((sai-Sai0)/sigma))
+CoreWT 0.72 
+SurfWT 0.05
+Sai0 0.65
+sigma 0.07
+
+//these two parameters define the weight for local and non-local residue pairs
+S2Local 0.5
+S2Nonlocal 1.0
+
+//this is the well depth for non-aromatic residues
+WD -1.3
+
+//this is the well depth for aromatic residues
+aroWD -1.4
+
+//lamda1 defines the slope for repulsive energy, larger lamda1 has more smooth curve
+lamda1 0.095
+
+//lamda2 defines the slope for attractive energy, larger lamda2 has more smooth curve
+lamda2 0.28
+
+//this is the reference energy file in path "data/ref/"
+REF localRef.Ala-H-higher

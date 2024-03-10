@@ -1,0 +1,7 @@
+START SketchPar
+SketchFile = 10_4.txt
+LinkLoop = 1
+RandomSeed = 123
+OutputFile = 10_4_
+GenerationNumber = 3
+END SketchPar

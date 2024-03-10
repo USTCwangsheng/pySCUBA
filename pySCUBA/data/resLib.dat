@@ -1,0 +1,187 @@
+RESIDUE ALA  5
+ALA-N   N   1.700 2 d n
+ALA-CA  CA  1.850 3 n n
+ALA-C   C   1.700 3 n n 
+ALA-O   O   1.600 1 a n
+ALA-CB  CB  1.890 1 n n
+RESIDUE CYS  6
+CYS-N   N   1.700 2 d n
+CYS-CA  CA  1.850 3 n n
+CYS-C   C   1.700 3 n n
+CYS-O   O   1.600 1 a n
+CYS-CB  CB  1.847 2 n n
+CYS-SG  SG  1.902 1 n n
+RESIDUE ASP  8
+ASP-N   N   1.700 2 d n
+ASP-CA  CA  1.850 3 n n
+ASP-C   C   1.700 3 n n
+ASP-O   O   1.600 1 a n
+ASP-CB  CB  1.868 2 n n
+ASP-CG  CG  1.694 3 n n
+ASP-OD1 OD1 1.587 1 a n
+ASP-OD2 OD2 1.587 1 a n
+RESIDUE GLU  9
+GLU-N   N   1.700 2 d n
+GLU-CA  CA  1.850 3 n n
+GLU-C   C   1.700 3 n n
+GLU-O   O   1.600 1 a n
+GLU-CB  CB  1.847 2 n n
+GLU-CG  CG  1.868 2 n n
+GLU-CD  CD  1.694 3 n n
+GLU-OE1 OE1 1.627 1 a n
+GLU-OE2 OE2 1.627 1 a n
+RESIDUE PHE 11
+PHE-N   N   1.700 2 d n
+PHE-CA  CA  1.850 3 n n
+PHE-C   C   1.700 3 n n
+PHE-O   O   1.600 1 a n
+PHE-CB  CB  1.847 2 n n
+PHE-CG  CG  1.709 3 n a 1.715 1.980
+PHE-CD1 CD1 1.782 2 n a 1.715 1.980
+PHE-CE1 CE1 1.841 2 n a 1.715 1.980
+PHE-CZ  CZ  1.841 2 n a 1.715 1.980
+PHE-CE2 CE2 1.841 2 n a 1.715 1.980
+PHE-CD2 CD2 1.782 2 n a 1.715 1.980
+RESIDUE GLY  4
+GLY-N   N   1.700 2 d n
+GLY-CA  CA  1.850 2 n n
+GLY-C   C   1.700 3 n n
+GLY-O   O   1.600 1 a n
+RESIDUE HIS 10
+HIS-N   N   1.700 2 d n
+HIS-CA  CA  1.850 3 n n
+HIS-C   C   1.700 3 n n
+HIS-O   O   1.600 1 a n
+HIS-CB  CB  1.847 2 n n
+HIS-CG  CG  1.694 3 n a 1.610 1.905
+HIS-ND1 ND1 1.677 2 b a 1.590 1.900
+HIS-CE1 CE1 1.709 2 n a 1.610 1.905
+HIS-NE2 NE2 1.677 2 b a 1.590 1.900
+HIS-CD2 CD2 1.709 2 n a 1.610 1.905
+RESIDUE ILE  8
+ILE-N   N   1.700 2 d n
+ILE-CA  CA  1.850 3 n n
+ILE-C   C   1.700 3 n n
+ILE-O   O   1.600 1 a n
+ILE-CB  CB  1.934 3 n n
+ILE-CG1 CG1 1.934 2 n n
+ILE-CD1 CD1 1.934 1 n n
+ILE-CG2 CG2 1.909 1 n n
+RESIDUE LYS  9
+LYS-N   N   1.700 2 d n
+LYS-CA  CA  1.850 3 n n
+LYS-C   C   1.700 3 n n
+LYS-O   O   1.600 1 a n
+LYS-CB  CB  1.909 2 n n
+LYS-CG  CG  1.909 2 n n
+LYS-CD  CD  1.909 2 n n
+LYS-CE  CE  1.890 2 n n
+LYS-NZ  NZ  1.958 1 d n
+RESIDUE LEU  8
+LEU-N   N   1.700 2 d n
+LEU-CA  CA  1.850 3 n n
+LEU-C   C   1.700 3 n n
+LEU-O   O   1.600 1 a n
+LEU-CB  CB  1.934 2 n n
+LEU-CG  CG  1.909 3 n n
+LEU-CD1 CD1 1.934 1 n n
+LEU-CD2 CD2 1.934 1 n n
+RESIDUE MET  8
+MET-N   N   1.700 2 d n
+MET-CA  CA  1.850 3 n n
+MET-C   C   1.700 3 n n
+MET-O   O   1.600 1 a n
+MET-CB  CB  1.868 2 n n
+MET-CG  CG  1.847 2 n n
+MET-SD  SD  1.902 2 n n
+MET-CE  CE  1.868 1 n n
+RESIDUE ASN  8
+ASN-N   N   1.700 2 d n
+ASN-CA  CA  1.850 3 n n
+ASN-C   C   1.700 3 n n
+ASN-O   O   1.600 1 a n
+ASN-CB  CB  1.847 2 n n
+ASN-CG  CG  1.650 3 n n
+ASN-OD1 OD1 1.587 1 a n
+ASN-ND2 ND2 1.713 1 d n
+RESIDUE PRO  7
+PRO-N   N   1.700 2 n n
+PRO-CA  CA  1.850 3 n n
+PRO-C   C   1.700 3 n n
+PRO-O   O   1.600 1 a n
+PRO-CB  CB  1.890 2 n n
+PRO-CG  CG  1.890 2 n n
+PRO-CD  CD  1.890 2 n n
+RESIDUE GLN  9
+GLN-N   N   1.700 2 d n
+GLN-CA  CA  1.850 3 n n
+GLN-C   C   1.700 3 n n
+GLN-O   O   1.600 1 a n
+GLN-CB  CB  1.847 2 n n
+GLN-CG  CG  1.868 2 n n
+GLN-CD  CD  1.694 3 n n
+GLN-OE1 OE1 1.627 1 a n
+GLN-NE2 NE2 1.713 1 d n
+RESIDUE ARG 11
+ARG-N   N   1.700 2 d n
+ARG-CA  CA  1.850 3 n n
+ARG-C   C   1.700 3 n n
+ARG-O   O   1.600 1 a n
+ARG-CB  CB  1.868 2 n n
+ARG-CG  CG  1.868 2 n n
+ARG-CD  CD  1.847 2 n n
+ARG-NE  NE  1.677 2 d n
+ARG-CZ  CZ  1.650 3 n n
+ARG-NH1 NH1 1.713 1 d n
+ARG-NH2 NH2 1.713 1 d n
+RESIDUE SER  6
+SER-N   N   1.700 2 d n
+SER-CA  CA  1.850 3 n n
+SER-C   C   1.700 3 n n
+SER-O   O   1.600 1 a n
+SER-CB  CB  1.868 2 n n
+SER-OG  OG  1.627 1 b n
+RESIDUE THR  7
+THR-N   N   1.700 2 d n
+THR-CA  CA  1.850 3 n n
+THR-C   C   1.700 3 n n
+THR-O   O   1.600 1 a n
+THR-CB  CB  1.890 3 n n
+THR-OG1 OG1 1.627 1 b n
+THR-CG2 CG2 1.909 1 n n
+RESIDUE VAL  7
+VAL-N   N   1.700 2 d n
+VAL-CA  CA  1.850 3 n n
+VAL-C   C   1.700 3 n n
+VAL-O   O   1.600 1 a n
+VAL-CB  CB  1.890 3 n n
+VAL-CG1 CG1 1.934 1 n n
+VAL-CG2 CG2 1.934 1 n n
+RESIDUE TRP 14
+TRP-N   N   1.700 2 d n
+TRP-CA  CA  1.850 3 n n
+TRP-C   C   1.700 3 n n
+TRP-O   O   1.600 1 a n
+TRP-CB  CB  1.847 2 n n
+TRP-CG  CG  1.650 3 n a 1.650 1.900 
+TRP-CD1 CD1 1.782 2 n a 1.635 1.972
+TRP-NE1 NE1 1.629 2 d a 1.575 1.940
+TRP-CE2 CE2 1.603 3 n a 1.580 1.950
+TRP-CZ2 CZ2 1.782 2 n a 1.650 1.977
+TRP-CH2 CH2 1.841 2 n a 1.700 1.977
+TRP-CZ3 CZ3 1.841 2 n a 1.700 1.977
+TRP-CE3 CE3 1.782 2 n a 1.665 1.948
+TRP-CD2 CD2 1.650 3 n a 1.580 1.950
+RESIDUE TYR 12
+TYR-N   N   1.700 2 d n
+TYR-CA  CA  1.850 3 n n
+TYR-C   C   1.700 3 n n
+TYR-O   O   1.600 1 a n
+TYR-CB  CB  1.847 2 n n
+TYR-CG  CG  1.694 3 n a 1.670 1.980
+TYR-CD1 CD1 1.782 2 n a 1.670 1.980
+TYR-CE1 CE1 1.782 2 n a 1.670 1.980
+TYR-CZ  CZ  1.650 3 n a 1.670 1.980
+TYR-OH  OH  1.583 1 b n 
+TYR-CE2 CE2 1.782 2 n a 1.670 1.980
+TYR-CD2 CD2 1.782 2 n a 1.670 1.980

@@ -1,0 +1,46 @@
+START MolSystmPar
+ChangePDBSequence	=	0
+PrintParameters	=	0
+ActiveResidues	=	
+FixedResidues	=	
+JobName	=	sd0
+MainChainFixedResidues	=	
+PDBStart	=	build0.pdb
+SideChainActiveResidues	=	
+SoftSideChainResidues	=	
+Sequence1L	=
+END MolSystmPar
+START InteractionPar
+PrintParameters	=	0
+WriteEneDetails	=	0
+CovalentWeight	=	1
+LocalHBWeight	=	0.6
+LocalStrWeight	=	0.5
+MCStericWeight	=	0.01
+PhiPsiWeight	=	2
+RotamerWeight	=	2.4
+SCPackingWeight	=	3.1
+SitePairWeight	=	0.32
+JobName	=	sd0
+END InteractionPar
+START SDRunPar
+AnnealingGroup	=	-1
+DOAnnealing	=	1
+DOShake	=	1
+PrintParameters	=	0
+PrintSteps	=	50
+RandomSeed	=	36
+RecalcNeighborListSteps	=	50
+RecalcSSSteps	=	500
+SavePDBSteps	=	100
+GAMMA	=	0.5
+TimeStep	=	0.002
+AnnealingScheme	=	3	0.5	10000	4000	1000
+GroupTemperatures	=	0.4
+StoreTopConfig	=	50	2	0.5	0
+JobName	=	sd0
+OutPDBFile	=	finall_out1.pdb
+RestraintsFile	=	restraints1.txt
+TopnPdbName	=	enetop_
+TemperatureGroups	=	ALL
+END SDRunPar

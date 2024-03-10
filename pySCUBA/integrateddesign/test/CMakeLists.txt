@@ -1,0 +1,5 @@
+link_directories(${PROJECT_BINARY_DIR}/lib)
+add_executable(testsitestate testsitestate.cpp)
+add_executable(testenestatistics testenestatistics.cpp)
+target_link_libraries (testsitestate loop)
+target_link_libraries (testenestatistics loop)

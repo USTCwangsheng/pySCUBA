@@ -1,0 +1,2 @@
+set(SOURCE_FILES atomsasa.cpp                line.cpp        quaternioncrd.cpp   rotation.cpp calculators.cpp             localframe.cpp  quatfit.cpp         spherepoints.cpp geometry_python_module.cpp  loopccd.cpp     rigidtransform.cpp)
+add_library(nspgeometry SHARED ${SOURCE_FILES})

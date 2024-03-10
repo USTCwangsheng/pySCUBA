@@ -1,0 +1,2 @@
+set(SOURCE_FILES aaconformer.cpp chaintree.cpp intatomkey.cpp  pdbrecord.cpp aminoacidseq.cpp  idealgeometries.cpp  pdbreader.cpp isolatedpocket.cpp rotamerutil.cpp pocketmodeler.cpp residuestate.cpp)
+add_library(nspproteinrep SHARED ${SOURCE_FILES})

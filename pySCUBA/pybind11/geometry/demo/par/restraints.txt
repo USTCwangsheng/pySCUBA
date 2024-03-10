@@ -1,0 +1,47 @@
+RMSDRestraints 0
+RMSDterms 500 3.0 5.0  sel_sel allatoms start.pdb
+refresidues chain0 0-6,13-22,30-34,41-50,56-60,66-75,81-85,91-100,106-110,115-124,130-134,140-149,155-159,164-173,182-186,192-201,210-214,220-229
+restrainedresidues chain0 0-6,13-22,30-34,41-50,56-60,66-75,81-85,91-100,106-110,115-124,130-134,140-149,155-159,164-173,182-186,192-201,210-214,220-229
+ENDRMSDrestraints
+
+HelixRestraints
+0 13 22 5000,0 41 50 5000,0 66 75 5000,0 91 100 5000,0 115 124 5000,0 140 149 5000,0 164 173 5000,0 192 201 5000,0 220 229 5000
+ENDHelixRestraints
+
+ContactRestraints 1
+GroupAResidues chain0 3-4
+GroupBResidues chain0 31-33
+3 50 5 8 20
+GroupAResidues chain0 31-33
+GroupBResidues chain0 57-59
+3 50 5 8 20
+GroupAResidues chain0 57-59
+GroupBResidues chain0 82-84
+3 50 5 8 20
+GroupAResidues chain0 82-84
+GroupBResidues chain0 107-109
+3 50 5 8 20
+GroupAResidues chain0 107-109
+GroupBResidues chain0 131-133
+3 50 5 8 20
+GroupAResidues chain0 131-133
+GroupBResidues chain0 156-158
+3 50 5 8 20
+GroupAResidues chain0 156-158
+GroupBResidues chain0 183-185
+3 50 5 8 20
+GroupAResidues chain0 183-185
+GroupBResidues chain0 211-213
+3 50 5 8 20
+GroupAResidues chain0 211-213
+GroupBResidues chain0 3-5
+3 50 5 8 20
+ENDContactRestraints
+ScaleInteraction
+0.4 chain0 7-12,23-29,35-40,51-55,61-65,76-80,86-90,101-105,111-114,125-129,135-139,150-154,160-163,174-181,187-191,202-209,215-219
+ENDScaleInteraction
+
+
+RgRestraint 1
+300 8 Rg_residues chain0 0-6,13-22,30-34,41-50,56-60,66-75,81-85,91-100,106-110,115-124,130-134,140-149,155-159,164-173,182-186,192-201,210-214,220-229
+ENDRgRestraint

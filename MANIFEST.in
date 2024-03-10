@@ -1,0 +1,5 @@
+global-include *.txt
+global-include *.cpp *.cc *.h  *.cmake *.so *.dat
+graft pySCUBA/data
+graft demo/demo_data
+prune build

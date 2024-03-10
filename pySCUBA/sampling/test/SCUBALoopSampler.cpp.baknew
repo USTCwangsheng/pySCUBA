@@ -1,0 +1,94 @@
+/*
+ * SCUBALoopSampler.cpp
+ *
+ *  Created on: 2021年3月23日
+ *      Author: yxchen
+ */
+
+#include "sampling/loopsampler.h"
+
+using namespace NSPintrct;
+using namespace NSPsampling;
+void printenergies(int lid, const std::array<double,IntrctBlck::ENESIZE> & energies,int loopidx=-1){
+	std::string edescr="etot= ";
+	if(loopidx>=0) edescr="eloop"+std::to_string(loopidx)+"= ";
+	std::cout << "Loop " <<lid <<edescr;
+	double etot=0.0;
+	for(auto t:energies)
+		if (!isnan(t))
+			etot+=t;
+	std::cout<<etot << " e_components:  ";
+	for(auto & t: energies)
+		if (!isnan(t))
+			std::cout <<" "<<t;
+		else
+			std::cout << " " << 0.0;
+	std::cout <<std::endl;
+}
+void writeloops(std::ostream &ofs,int lid, const std::array<double,IntrctBlck::ENESIZE> & energies,
+		const std::vector<NSPgeometry::XYZ> & crds){
+	ofs <<lid<<std::endl;
+	for(auto & t:energies) ofs<<" "<<t;
+	ofs<<std::endl;
+	for(auto &c:crds) ofs <<c.toString()<<std::endl;
+}
+int main(int argc, char **argv){
+	assert(argc>=2);
+	std::string parfile(argv[1]);
+	std::string jobname="auto";
+	IntrctPara ipara;
+	SDRunPara sdpara;
+	LpSamplerPara lpspara;
+	readpara_lpsampler(parfile,lpspara,ipara,sdpara,jobname);
+	LoopSampler sampler=mkloopsampler(lpspara,ipara,sdpara);
+	sampler.readparams(lpspara);
+	double ene,ene1,lastene;
+	std::vector<double> enes;
+	std::array<double,IntrctBlck::ENESIZE> energies;
+	std::vector<std::array<double,IntrctBlck::ENESIZE>> loopenergies;
+	std::shared_ptr<std::vector<NSPgeometry::XYZ>> loopcrds;
+//	loopcrds = sampler.loopatomcrds();
+	loopcrds=sampler.optimizeloops(ene,energies);
+	//lastene = ene;
+	int lidx=0;
+	printenergies(lidx,energies);
+    if(lpspara.nloops>1){
+    	enes=sampler.loopenes(loopenergies);
+    	for(int l=0;l<lpspara.nloops;++l){
+    		printenergies(lidx,loopenergies[l],l);
+    	}
+    }
+    std::ofstream nativeloops("startloops.dat");
+    writeloops(nativeloops,lidx,energies,*loopcrds);
+    nativeloops.close();
+    std::ofstream outloops(lpspara.outloopfile);
+	auto lastsampler = sampler;
+
+    std::cout << "Will Perform LoopSampling: " << lpspara.reconstructnum << " tries." << std::endl;
+	for(int i=0;i<lpspara.reconstructnum;++i){
+		lidx++;
+		
+		loopcrds=sampler.regenuseloops(ene,energies);
+		if (i == 0) { lastene = ene;lastsampler = sampler;
+		}
+		if (ene < lastene ) {
+			lastene = ene;
+			lastsampler = sampler;
+			// update sampler.looppools_
+			sampler.updatelooppools();
+			printenergies(lidx, energies);
+			if (lpspara.nloops > 1) {
+				enes = sampler.loopenes(loopenergies);
+				for (int l = 0;l < lpspara.nloops;++l) {
+					printenergies(lidx, loopenergies[l], l);
+				}
+			}
+			writeloops(outloops, lidx, energies, *loopcrds);
+		}
+		else {
+			sampler = lastsampler;
+		}
+		std::cout << "lastene= " << lastene << std::endl;
+
+	}
+}

@@ -1,0 +1,11 @@
+# Please ensure that any changes remain compliant with 2.4.8.
+if(NOT EMBED_OPENBABEL)
+  cmake_minimum_required(VERSION 2.4.8)
+endif()
+SET(LIBRARY_OUTPUT_PATH  "${CMAKE_SOURCE_DIR}/lib" )
+SET(EXECUTABLE_OUTPUT_PATH  "${CMAKE_SOURCE_DIR}/test" )
+link_directories("${CMAKE_SOURCE_DIR}/../py/bin" "${CMAKE_SOURCE_DIR}/../cliquer")
+include_directories(${CMAKE_SOURCE_DIR} ${CMAKE_SOURCE_DIR}/../ /usr/include/openbabel-2.0  ${CMAKE_SOURCE_DIR}/noob)
+add_subdirectory(src)
+add_subdirectory(noob)
+#add_subdirectory(test)

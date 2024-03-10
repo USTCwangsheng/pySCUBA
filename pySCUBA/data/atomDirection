@@ -1,0 +1,107 @@
+ALA CA  sp3-1 N   C   CB 
+ALA CB  sp3-3 CA 
+CYS CA  sp3-1 N   C   CB 
+CYS CB  sp3-2 CA  SG 
+CYS SG  other CB     
+ASP CA  sp3-1 N   C   CB 
+ASP CB  sp3-2 CA  CG     
+ASP CG  sp2-0 OD1  OD2     
+ASP OD1 other CG
+ASP OD2 other CG
+GLU CA  sp3-1 N   C   CB 
+GLU CB  sp3-2 CA  CG    
+GLU CG  sp3-2 CB  CD
+GLU CD  sp2-0 OE1  OE2
+GLU OE1 other CD
+GLU OE2 other CD
+PHE CA  sp3-1 N   C   CB 
+PHE CB  sp3-2 CA  CG
+PHE CG  sp2-0 CD1 CD2     
+PHE CD1 sp2-1 CG  CE1
+PHE CE1 sp2-1 CD1 CZ
+PHE CZ  sp2-1 CE1 CE2     
+PHE CE2 sp2-1 CD2 CZ     
+PHE CD2 sp2-1 CG  CE2
+GLY CA  sp3-2 N   C  
+HIS CA  sp3-1 N   C   CB 
+HIS CB  sp3-2 CA  CG     
+HIS CG  sp2-0 ND1 CD2
+HIS ND1 sp2-1 CG CE1
+HIS CE1 sp2-1 ND1 NE2
+HIS NE2 sp2-1 CD1 CE1
+HIS CD2 sp2-1 CG  NE2
+ILE CA  sp3-1 N   C   CB 
+ILE CB  sp3-1 CA  CG1 CG2
+ILE CG1 sp3-2 CB  CD1     
+ILE CD1 sp3-3 CG1
+ILE CG2 sp3-3 CB
+LYS CA  sp3-1 N   C   CB 
+LYS CB  sp3-2 CA  CG
+LYS CG  sp3-2 CB  CD
+LYS CD  sp3-2 CG  CE
+LYS CE  sp3-2 CD  NZ     
+LYS NZ  sp3-3 CE
+LEU CA  sp3-1 N   C   CB 
+LEU CB  sp3-2 CA  CG     
+LEU CG  sp3-1 CB  CD1 CD2     
+LEU CD1 sp3-3 CG     
+LEU CD2 sp3-3 CG     
+MET CA  sp3-1 N   C   CB 
+MET CB  sp3-2 CA  CG
+MET CG  sp3-2 CB  SD
+MET SD  sp3-2 CG  CE     
+MET CE  sp3-3 SD     
+ASN CA  sp3-1 N   C   CB 
+ASN CB  sp3-2 CA  CG     
+ASN CG  sp2-0 OD1 ND2
+ASN OD1 other CG     
+ASN ND2 other CG     
+PRO CA  sp3-1 N   C   CB 
+PRO CB  sp3-2 CA  CG     
+PRO CG  sp3-2 CB  CD
+PRO CD  sp3-2 CG  N
+GLN CA  sp3-1 N   C   CB 
+GLN CB  sp3-2 CA  CG     
+GLN CG  sp3-2 CB  CD
+GLN CD  sp2-0 OE1 NE2
+GLN OE1 other CD
+GLN NE2 other CD
+ARG CA  sp3-1 N   C   CB 
+ARG CB  sp3-2 CA  CG     
+ARG CG  sp3-2 CB  CD
+ARG CD  sp3-2 CG  NE
+ARG NE  sp2-1 CD  CZ
+ARG CZ  sp2-0 NH1 NH2
+ARG NH1 sp2-2 CZ  NE     
+ARG NH2 sp2-2 CZ  NE     
+SER CA  sp3-1 N   C   CB 
+SER CB  sp3-2 CA  OG 
+SER OG  other CB
+THR CA  sp3-1 N   C   CB 
+THR CB  sp3-1 CA  OG1 CG2
+THR OG1 other CB     
+THR CG2 sp3-3 CB
+VAL CA  sp3-1 N   C   CB 
+VAL CB  sp3-1 CA  CG1 CG2
+VAL CG1 sp3-3 CB     
+VAL CG2 sp3-3 CB
+TRP CA  sp3-1 N   C   CB 
+TRP CB  sp3-2 CA CG     
+TRP CG  sp2-0 CD1 CD2     
+TRP CD1 sp2-1 CG  NE1     
+TRP NE1 sp2-1 CD1 CE2     
+TRP CE2 sp2-0 CD2 CZ2
+TRP CZ2 sp2-1 CE2 CH2
+TRP CH2 sp2-1 CZ2 CZ3     
+TRP CZ3 sp2-1 CE3 CH2     
+TRP CE3 sp2-1 CD2 CZ3     
+TRP CD2 sp2-0 CG  CE3
+TYR CA  sp3-1 N   C   CB 
+TYR CB  sp3-2 CA  CG     
+TYR CG  sp2-0 CD1 CD2
+TYR CD1 sp2-1 CG  CE1
+TYR CE1 sp2-1 CD1 CZ
+TYR CZ  sp2-0 CE1 CE2     
+TYR OH  other CZ     
+TYR CE2 sp2-1 CD2 CZ     
+TYR CD2 sp2-1 CG  CE2

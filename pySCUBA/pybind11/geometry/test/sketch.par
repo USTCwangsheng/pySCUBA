@@ -1,0 +1,7 @@
+START SketchPar
+SketchFile = timb.txt
+LinkLoop = 1
+RandomSeed = 20
+OutputFile = randomchain
+GenerationNumber = 3
+END SketchPar

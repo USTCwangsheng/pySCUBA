@@ -1,0 +1,7 @@
+add_subdirectory (geometry)
+add_subdirectory (proteinrep)
+add_subdirectory (iblock)
+add_subdirectory (sampling)
+add_subdirectory (backbone)
+add_subdirectory (dstl)
+add_subdirectory (designseq)

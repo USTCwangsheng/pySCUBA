@@ -1,0 +1,3 @@
+set(INTRCT_SOURCE_FILES intrctmolcheckers.cpp loopreservoir.cpp molmodeler.cpp molsystmpara.cpp blkselector.cpp scpackingenergy.cpp rotamerenergy.cpp localhbenergy.cpp sitepairenergy.cpp localstrenergy.cpp intrctpara.cpp nnterms.cpp phipsicodes.cpp phipsienergy.cpp intrctmol.cpp energycalculators.cpp blcktopo.cpp  intrctblck.cpp  vsctypes.cpp internalcrds.cpp ssrestraint.cpp)
+#set(INTRCT_SOURCE_FILES blcktopo.cpp  vsctypes.cpp)
+add_library(nspintrct ${INTRCT_SOURCE_FILES})

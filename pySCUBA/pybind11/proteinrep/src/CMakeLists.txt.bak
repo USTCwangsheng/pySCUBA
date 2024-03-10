@@ -1,0 +1,6 @@
+#set(PROT_SOURCE_FILES pb_aaconformer.cpp)
+#add_library(proteinrep ${PROT_SOURCE_FILES})
+#target_link_libraries(proteinrep ${PYTHON_LIBRARIES} ${GSL_LIBRARY} ${GSL_CBLAS_LIBRARY})
+#set_target_properties(proteinrep PROPERTIES PREFIX "")
+set(PROT_SOURCE_FILES /home/cyx/workspace/pySCUBA/proteinrep/src/pdbreader.cpp /home/cyx/workspace/pySCUBA/proteinrep/src/pdbrecord.cpp /home/cyx/workspace/pySCUBA/proteinrep/src/aaconformer.cpp)
+pybind11_add_module(pb_proteinrep pb_proteinrep.cpp ${PROT_SOURCE_FILES})

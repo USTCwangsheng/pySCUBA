@@ -1,0 +1,27 @@
+RMSDRestraints 0 
+RMSDterms 500 4.0 6.0  sel_sel allatoms build0.pdb
+refresidues chain0 0-9,15-18,24-43,49-55,61-74,82-88,96-102,111-130,135-154,
+restrainedresidues chain0 0-9,15-18,24-43,49-55,61-74,82-88,96-102,111-130,135-154,
+ENDRMSDrestraints 
+HelixRestraints 
+0 0 9 1000,0 24 43 1000,0 61 74 1000,0 111 130 1000,0 135 154 1000,
+ENDHelixRestraints 
+
+ContactRestraints 1
+GroupAResidues chain0 15-18 
+GroupBResidues chain0 49-55 
+3 25 5 8 20
+GroupAResidues chain0 49-55
+GroupBResidues chain0 96-102
+3 25 5 8 20
+GroupAResidues chain0 82-88
+GroupBResidues chain0 96-102
+3 25 5 8 20
+ENDContactRestraints
+
+ScaleInteraction 
+0.1 chain0 10-14,19-23,44-48,56-60,75-81,89-95,103-110,131-134,
+ENDScaleInteraction 
+RgRestraint 1 
+50 8 Rg_residues chain0 0-9,15-18,24-43,49-55,61-74,82-88,96-102,111-130,135-154,
+ENDRgRestraint 

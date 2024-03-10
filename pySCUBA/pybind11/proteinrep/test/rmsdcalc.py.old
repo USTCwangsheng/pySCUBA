@@ -1,0 +1,74 @@
+#!/bin/python3
+"""calc. rmsd between two pdbs"""
+import sys,os
+path='/home/cyx/workspace/pySCUBA/pybind11/bin/'
+sys.path.append(path)
+import pb_geometry
+import pb_proteinrep
+
+pdb1 = 'output.pdb'
+pdb2 = 'start.pdb'
+rmsdtype = 'ALL'
+AAC1 = pb_proteinrep.AAConformersInModel()
+AAC1.readpdbfile(pdb1)
+AAC2 = pb_proteinrep.AAConformersInModel()
+AAC2.readpdbfile(pdb2)
+qf = pb_geometry.QuatFit()
+if rmsdtype == 'ALL':
+    cons1 = AAC1.conformers
+    crd1 = []
+    for c in cons1:
+        for r in c:
+            crds = r.globalcrd
+            for i in crds:
+                crd1.append(crds[i])
+    cons2 = AAC2.conformers
+    crd2 = []
+    for c in cons2:
+        for r in c:
+            crds = r.globalcrd
+            for i in crds:
+                crd2.append(crds[i])
+    rmsd = pb_geometry.QuatFit.rmsd(crd1, crd2)
+    print("rmsd: %f" %rmsd)
+elif rmsdtype == 'MC':
+    cons1 = AAC1.conformers
+    crd1 = []
+    for c in cons1:
+        for r in c:
+            crds = r.globalcrd
+            for i in crds:
+                if i == "N" or i == "CA" or i == "C" or i == "O":
+                    crd1.append(crds[i])
+    cons2 = AAC2.conformers
+    crd2 = []
+    for c in cons2:
+        for r in c:
+            crds = r.globalcrd
+            for i in crds:
+                if i == "N" or i == "CA" or i == "C" or i == "O":
+                    crd2.append(crds[i])
+    rmsd = pb_geometry.QuatFit.rmsd(crd1, crd2)
+    print("rmsd: %f" %rmsd)
+elif rmsdtype == 'CA':
+    cons1 = AAC1.conformers
+    crd1 = []
+    for c in cons1:
+        for r in c:
+            crds = r.globalcrd
+            for i in crds:
+                if i == "CA":
+                    crd1.append(crds[i])
+    cons2 = AAC2.conformers
+    crd2 = []
+    for c in cons2:
+        for r in c:
+            crds = r.globalcrd
+            for i in crds:
+                if i == "CA":
+                    crd2.append(crds[i])
+    rmsd = pb_geometry.QuatFit.rmsd(crd1, crd2)
+    print("rmsd: %f" %rmsd)
+else:
+    print("rmsdtype could only be 3 types: ALL MC CA")
+

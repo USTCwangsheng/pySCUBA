@@ -1,0 +1,31 @@
+#bond lengths
+CA N 1.47
+CA C 1.53
+C O 1.23
+C N 1.33
+N H 1.0
+CA CB 1.53
+CH3 C 1.53
+N CH3 1.47
+#angles
+CH3 C N 115.0
+CH3 C O 124.0
+O C N 122.9
+C N CA 122.0
+C N H  123.0
+H N CA 115.0
+N CA CB 109.5
+N CA C 111.04
+CB CA C 109.5
+CA C N 116.53
+CA C O 120.5
+#relative torsions
+CH3 C O N 180.0
+CA C O N 180.0
+C N H CA 180.0
+C N H CH3 180.0
+N CA CB C 130.0
+#default torsions
+dt CA C N CA 180.0
+dt C N CA C -120.0
+dt N CA C O 60.0

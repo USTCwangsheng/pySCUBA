@@ -1,0 +1,8 @@
+set(SPL_SOURCE_FILES pb_sampling.cpp)
+add_library(sampling ${SPL_SOURCE_FILES})
+#target_link_libraries(sampling ${PYTHON_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(sampling ${PYTHON_LIBRARIES})
+set_target_properties(sampling PROPERTIES PREFIX "")
+file(GLOB USER_CPP ${USR_SRC_DIR}/sampling/src/*.cpp)
+pybind11_add_module(pb_sampling pb_sampling.cpp ${SPL_SOURCE_FILES} ${USER_CPP})
+target_link_libraries(pb_sampling PRIVATE ${ALL_LIBS})

@@ -1,0 +1,40 @@
+START SDRunPar
+AnnealingGroup	=	-1
+DOAnnealing	=	1
+DOShake	=	1
+PrintParameters	=	0
+PrintSteps	=	50
+RandomSeed	=	37
+RecalcNeighborListSteps	=	50
+RecalcSSSteps	=	500
+SavePDBSteps	=	100
+GAMMA	=	0.5
+TimeStep	=	0.002
+AnnealingScheme	=	3	0.5	20000	8000	2000
+GroupTemperatures	=	1
+StoreTopConfig	=	50	2	0.5	-1000
+JobName	=	sd0
+OutPDBFile	=	finall_out1.pdb
+RestraintsFile	=	./par/restraints.txt
+TemperatureGroups	=	ALL
+END SDRunPar
+START SDRunPar
+AnnealingGroup	=	-1
+DOAnnealing	=	1
+DOShake	=	1
+PrintParameters	=	0
+PrintSteps	=	50
+RandomSeed	=	37
+RecalcNeighborListSteps	=	50
+RecalcSSSteps	=	500
+SavePDBSteps	=	100
+GAMMA	=	0.5
+TimeStep	=	0.002
+AnnealingScheme	=	3	0.5	20000	8000	2000
+GroupTemperatures	=	1
+StoreTopConfig	=	50	2	0.5	-1000
+JobName	=	sd0
+OutPDBFile	=	finall_out1.pdb
+RestraintsFile	=	./par/restraints.txt
+TemperatureGroups	=	ALL
+END SDRunPar

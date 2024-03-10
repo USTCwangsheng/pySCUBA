@@ -1,0 +1,48 @@
+#atoms in natural proteins. This is used for reading PDB files
+#number of atom types
+40
+#type_id atomic_number hb_donor hb_acceptor ncontaining-renames containing_res atomname
+#C Carbonyl
+0 6 0 0 0 0 3 ANY C ASN CG GLN CD
+#bare 0, carboxyl
+1 6 0 0  0 0 3 ANY CT ASP CG GLU CD
+#bare C aliphatic
+2 6 0 0 0 0 0
+#bare C aromatic
+3 6 0 0 1 0 7 PHE CG TYR CG TYR CZ TRP CG TRP CD2 TRP CE2 HIS CG
+# CH1 aromatic
+4 6 0 0 1 0 16 PHE CD1 PHE CD2 PHE CE1 PHE CE2 PHE CZ TYR CD1 TYR CD2 TYR CE1 TYR CE2 TRP CD1 TRP CE3 TRP CZ2 TRP CZ3 TRP CH2 HIS CE1 HIS CD2
+# CH1 non-aromatic
+5 6 0 0 0 0 7 ANY CA VAL CB ASP CB ILE CB ASN CB THR CB LEU CG 
+# CH2 
+6 6 0 0 0 0 13 GLY CA ANY CB PRO CG ILE CG1 PRO CD LYS CG LYS CD LYS CE GLU CG GLN CG ARG CG ARG CD MET CG
+#CH3
+7 6 0 0 0 0 9 ALA CB VAL CG1 VAL CG2 LEU CD1 LEU CD2 ILE CG2 ILE CD1 THR CG2 MET CE
+# CZ ARG
+8 6 0 0 0 0 1 ARG CZ
+#O carbonyl
+10 8 0 1 0 0 3 ANY O ASN OD1 GLN OE1
+#O, hydroxyl
+11 8 1 1 0 0 3 SER OG THR OG1 TYR OH
+#O carboxyl
+12 8 0 1 0 -1 5 ANY OXT ASP OD1 ASP OD2 GLU OE1 GLU OE2
+# N amide
+20  7 1 0 0 0 3 ANY N ASN ND2 GLN NE2
+# N amino
+21  7 1 0 0 1 2 ANY NT LYS NZ
+# N his,protonated
+22  7 1 0 1 1 4 HIS ND1 HIS NE2 HISH ND1 HISH NE2 
+# N arg term
+23  7 1 0 0 1 2 ARG NH1 ARG NH2
+# N aromatic, deprotonnated
+24 7  0 1 1 0 2 HISD NE2 HISE ND1 
+# N proline
+25 7 0 0 0 0 1 PRO N
+# N TRP
+26 7 1 0 1 0 1  TRP NE1
+# NE ARG
+27 7 1 0 0 1 1 ARG NE
+# S CYS
+30 16 1 0 0 0 1  CYS SG
+# S MET
+31 16 0 0 0 0 1 MET SD

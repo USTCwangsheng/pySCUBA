@@ -1,0 +1,3 @@
+set(SAMPLING_SOURCE_FILES savedloops.cpp loopsampler.cpp runsddefaults.cpp sdrunpara.cpp molsdrun.cpp  sdrunpara.cpp  shakebonds.cpp  stochasticdynamics.cpp pocketdocker.cpp restraints.cpp rmsdrestraintreader.cpp groupdistance.cpp ligandpep.cpp ligpepsampler.cpp savedligpconfig.cpp)
+#set(SAMPLING_SOURCE_FILES blcktopo.cpp  vsctypes.cpp)
+add_library(nspsampling SHARED ${SAMPLING_SOURCE_FILES})

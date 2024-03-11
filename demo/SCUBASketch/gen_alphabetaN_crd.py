@@ -7,7 +7,7 @@ def to_cartesian(polar_vector):
     return np.array([length*np.cos(angle), length*np.sin(angle)]).T
 
 
-def gen_alphabeta_sketch(motif_num=12, beta_dist=5, helix_to_beta_dist = 7, first_length=5, second_length=10, N_pad=3, N_pad_minus_z=4, motif_str='E_H', out_f=None):
+def gen_alphabeta_sketch(motif_num=12, beta_dist=5, helix_to_beta_dist = 7, first_length=5, second_length=10, N_pad=3, N_pad_minus_z=4, motif_str='E_H', out_f=None): #N_pad_minus_z：The negative value of the translation of the n-terminal coordinate on the z axis.
     pseudo_motif_num = motif_num+1
     motif_angle = 360.0/pseudo_motif_num
     side0_angle = motif_angle/2
@@ -51,9 +51,9 @@ if __name__ == '__main__':
         helix_length = 10 #The length of αhelix.
         os.makedirs(f'{gen_dir}/{motif_str}{motif_num}_{beta_length}_{helix_length}', exist_ok=True)
         out_f = f'{gen_dir}/{motif_str}{motif_num}_{beta_length}_{helix_length}/{motif_str}{motif_num}_{beta_length}_{helix_length}.txt'
-        sketch_par_f = f'{gen_dir}/{motif_str}{motif_num}_{beta_length}_{helix_length}/sketch.par'
+        sketch_par_f = f'{gen_dir}/{motif_str}{motif_num}_{beta_length}_{helix_length}/sketch.par' #Parameter file, which is automatically generated if it does not exist
         with open(sketch_par_f, 'w') as writer:
-            writer.write(f'START SketchPar\n') #Parameter file, which is automatically generated if it does not exist
+            writer.write(f'START SketchPar\n') 
             writer.write(f'SketchFile = {motif_str}{motif_num}_{beta_length}_{helix_length}.txt\n') #sketch coordinate file.
             writer.write(f'LinkLoop = 1\n') #link loop option. 0 is not connected and 1 is connected.
             writer.write(f'RandomSeed = 123\n')
@@ -61,7 +61,7 @@ if __name__ == '__main__':
             writer.write(f'GenerationNumber = 3\n') #Number of structures generated.
             writer.write(f'END SketchPar\n')
 
-        gen_alphabeta_sketch(motif_num=motif_num,first_length=beta_length, second_length=helix_length, N_pad=3, motif_str=motif_str,out_f=out_f, beta_dist=6)
+        gen_alphabeta_sketch(motif_num=motif_num,first_length=beta_length, second_length=helix_length, N_pad=3, motif_str=motif_str,out_f=out_f, beta_dist=6) #N_pad:Add an additional number of residues to the N terminal. beta_dist:The distance between βstrands in the motif.
         os.chdir(f'{gen_dir}/{motif_str}{motif_num}_{beta_length}_{helix_length}')
         os.system(f'~/pySCUBA/pySCUBA/cpp_bin/SCUBASketch sketch.par') #generate pdb from coordinate file. Change this path to your installation path.
         os.chdir(cur_dir)

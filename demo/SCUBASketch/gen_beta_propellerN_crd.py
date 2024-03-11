@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     cur_dir = os.getcwd()
     for motif_num in np.arange(9, 12, 1): #motif num range:8,9,10
-        for beta_length in np.arange(4, 6, 1): #The length of βstands:4,5residues
+        for beta_length in np.arange(4, 6, 1): #The length of each β-stands:4,5residues
             os.makedirs(f'{gen_dir}/{motif_num}_{beta_length}', exist_ok=True)
             out_f = f'{gen_dir}/{motif_num}_{beta_length}/{motif_num}_{beta_length}.txt'
             sketch_par_f = f'{gen_dir}/{motif_num}_{beta_length}/sketch.par' #Parameter file, which is automatically generated if it does not exist
@@ -63,7 +63,7 @@ if __name__ == '__main__':
                 writer.write(f'GenerationNumber = 3\n') #Number of structures generated.
                 writer.write(f'END SketchPar\n')
 
-            gen_alphabeta_sketch(motif_num, motif_dist=5, beta_to_beta_dist=5, beta_length=beta_length, out_f=out_f) #motif_num:Number of motifs. motif_dist:The distance between motifs. beta_to_beta_dist：The distance between βstands in the motif.
+            gen_alphabeta_sketch(motif_num, motif_dist=5, beta_to_beta_dist=5, beta_length=beta_length, out_f=out_f) #motif_num:Number of motifs. motif_dist:The distance between motifs. beta_to_beta_dist：The distance between β-stands intra a motif.
             os.chdir(f'{gen_dir}/{motif_num}_{beta_length}')
             os.system(f'~/pySCUBA/pySCUBA/cpp_bin/SCUBASketch sketch.par') #generate pdb from crd. Change this path to your installation path.
             os.chdir(cur_dir)

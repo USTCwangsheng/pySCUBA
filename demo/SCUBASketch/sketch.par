@@ -1,0 +1,7 @@
+START SketchPar
+SketchFile = 3pvh.txt
+LinkLoop = 1
+RandomSeed = 123
+OutputFile = 3pvh_build
+GenerationNumber = 3
+END SketchPar

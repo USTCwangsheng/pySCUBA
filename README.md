@@ -57,8 +57,8 @@ python setup.py develop
 ```
 After a few minutes of compiling, the pySCUBA package is installed
 
-To test if pySCUBA is successfully installed, run
+To test if pySCUBA is successfully installed, switch to the `/demo/SCUBASketch/` directory and run
 ```sh
-python -c "import pySCUBA"
+python SCUBAsketch.py
 ```
-If there are no error messages, it indicates that the pySCUBA has been installed successfully.
+If there are no error messages, it indicates that the pySCUBA has been installed successfully. More demos are in the `/demo/SCUBASketch/` folder.

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtest_embed_lib.a  CMakeFiles/test_embed_lib.dir/__/embed.cpp.o
-/usr/bin/ranlib libtest_embed_lib.a

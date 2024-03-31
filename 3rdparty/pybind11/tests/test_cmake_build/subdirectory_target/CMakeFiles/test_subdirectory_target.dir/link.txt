@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -Os -DNDEBUG  -shared  -o test_cmake_build.cpython-38-x86_64-linux-gnu.so CMakeFiles/test_subdirectory_target.dir/__/main.cpp.o 

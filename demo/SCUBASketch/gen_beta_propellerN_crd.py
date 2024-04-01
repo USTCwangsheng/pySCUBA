@@ -7,13 +7,13 @@ def to_cartesian(polar_vector):
     return np.array([length*np.cos(angle), length*np.sin(angle)]).T
 
 
-def gen_alphabeta_sketch(motif_num=7, beta_dist=5, beta_to_beta_dist= 3, beta_sheet_num=4, beta_length=5, N_pad=3, N_pad_minus_z=4, out_f=None):
+def gen_beta_propeller_sketch(motif_num=7, motif_dist=5, beta_to_beta_dist= 3, beta_sheet_num=4, beta_length=5, N_pad=3, N_pad_minus_z=4, out_f=None):
     pseudo_motif_num = motif_num+1
     motif_angle = 360.0/pseudo_motif_num
     side0_angle = motif_angle/2
     side1_angle = (180 - motif_angle)/2
-    side2_length = np.sin(np.deg2rad(side1_angle))/np.sin(np.deg2rad(side0_angle)) * beta_dist/2
-    structure_rad = np.sqrt(side2_length ** 2 + (beta_dist/2) ** 2)
+    side2_length = np.sin(np.deg2rad(side1_angle))/np.sin(np.deg2rad(side0_angle)) * motif_dist/2
+    structure_rad = np.sqrt(side2_length ** 2 + (motif_dist/2) ** 2)
     
     motif_angle = np.linspace(0, 2 * np.pi, pseudo_motif_num)
     beta_motif_len = np.ones(pseudo_motif_num) * structure_rad
@@ -63,8 +63,9 @@ if __name__ == '__main__':
                 writer.write(f'GenerationNumber = 3\n') #Number of structures generated.
                 writer.write(f'END SketchPar\n')
 
-            gen_alphabeta_sketch(motif_num, motif_dist=5, beta_to_beta_dist=5, beta_length=beta_length, out_f=out_f) #motif_num:Number of motifs. motif_dist:The distance between motifs. beta_to_beta_dist：The distance between β-stands intra a motif.
+            gen_beta_propeller_sketch(motif_num, motif_dist=5, beta_to_beta_dist=5, beta_length=beta_length, out_f=out_f) #motif_num:Number of motifs. motif_dist:The distance between motifs. beta_to_beta_dist：The distance between β-stands intra a motif.
             os.chdir(f'{gen_dir}/{motif_num}_{beta_length}')
-            os.system(f'~/pySCUBA/pySCUBA/cpp_bin/SCUBASketch sketch.par') #generate pdb from crd. Change this path to your installation path.
+            install_path='~/pySCUBA' #Change this path to your installation path.
+            os.system(install_path+f'/pySCUBA/cpp_bin/SCUBASketch sketch.par') #generate pdb from coordinate file. 
             os.chdir(cur_dir)
                 

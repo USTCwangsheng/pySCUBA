@@ -63,6 +63,7 @@ if __name__ == '__main__':
 
         gen_alphabeta_sketch(motif_num=motif_num,first_length=beta_length, second_length=helix_length, N_pad=3, motif_str=motif_str,out_f=out_f, beta_dist=6) #N_pad:Add an additional number of residues to the N terminal. beta_dist:The distance between β-strands in respective motifs.
         os.chdir(f'{gen_dir}/{motif_str}{motif_num}_{beta_length}_{helix_length}')
-        os.system(f'~/pySCUBA/pySCUBA/cpp_bin/SCUBASketch sketch.par') #generate pdb from coordinate file. Change this path to your installation path.
+        install_path='~/pySCUBA' #Change this path to your installation path.
+        os.system(install_path+f'/pySCUBA/cpp_bin/SCUBASketch sketch.par') #generate pdb from coordinate file. Change this path to your installation path.
         os.chdir(cur_dir)
     

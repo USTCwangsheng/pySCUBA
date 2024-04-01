@@ -32,12 +32,12 @@ To install [lapack](https://github.com/Reference-LAPACK/lapack), we suggest buil
    cmake --build . -j --target install
 ```
 
-We assume that the dynamic libraries liblapacke.so installed in` ~/.local/lapack/` if you follow the previous steps .However , if lapack installed in other path ,your can to change the line in our CMakeLists.txt to your path:
+We assume that the dynamic libraries `liblapacke.so` installed in` ~/.local/lapack/` if you follow the previous steps. However, if lapack installed in other path, your can to change the line in our CMakeLists.txt to your path:
 ```cmake
 # if install lapack in other enviroment ,change the line
 set(PythonLibs_LIBRARIES ${YOURPATH}/liblapacke.so)
 ```
-and make sure the file lapacke.h in `/usr/local/include`
+and make sure the file `lapacke.h`(Under the path `/lapack-3.10.1/LAPACKE/include/`) in `/usr/local/include`.
 
 Python 3.8 dynamic libraries are also necessary for our project. We assume you have created a Python 3.8 environment using Anaconda. 
 ```sh
@@ -50,15 +50,22 @@ The following files, libpython3.8.so and libpython3.8.so.1.0, should be located 
 # if install python3.8 in other enviroment ,change the line
 set(PythonLibs_LIBRARIES ${YOURPATH}/libpython3.8.so)
 ```
-### 1.2. Install pySCUBA
+## 2. Install pySCUBA
 Enter our project directory and run the installation program:
 ```sh
 python setup.py develop
 ```
 After a few minutes of compiling, the pySCUBA package is installed
 
-To test if pySCUBA is successfully installed, switch to the `/demo/SCUBASketch/` directory and run
+Then activate the environment:
 ```sh
+source ~/.bashrc
+conda activate pySCUBA
+```
+
+To test if pySCUBA is successfully installed, run
+```sh
+cd ./demo/SCUBASketch/
 python SCUBAsketch.py
 ```
 If there are no error messages, it indicates that the pySCUBA has been installed successfully. More demos are in the `/demo/SCUBASketch/` folder.

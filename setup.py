@@ -71,7 +71,7 @@ modules=[
 
 setup(
     name='pySCUBA',
-    version='0.0.1',
+    version='1.0',
     author='yhh',
     author_email='yuhh@mail.ustc.edu.cn',
     install_requires=[

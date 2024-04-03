@@ -4,6 +4,8 @@ pySCUBA
 
 pySCUBA is Python bindings to the SCUBA library. These can be built from the SCUBA source code. 
 
+Here we show how to install pySCUBA(version 1.0) and use the SCUBA-sketch program.
+
 Getting Started Using pySCUBA
 ============================
 

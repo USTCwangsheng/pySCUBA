@@ -2,6 +2,6 @@
 import os, sys
 
 #################sketch生成初始结构#####################
-os.system(f'../../pySCUBA/cpp_bin/SCUBASketch sketch.par') #Change this path to your installation path.
+os.system(f'../../pySCUBA/cpp_bin/SCUBASketch sketch.par') 
 
 

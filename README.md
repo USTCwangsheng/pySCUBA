@@ -12,6 +12,7 @@ Getting Started Using pySCUBA
 ## 1. Requirements
 
 -  Operating System: Linux (Recommended)
+-  No non-standard hardware is required.
 
 ### 1.1. Install Dependencies
 
@@ -71,4 +72,4 @@ To test if pySCUBA is successfully installed, run
 cd ./demo/SCUBASketch/
 python SCUBAsketch.py
 ```
-If there are no error messages, it indicates that the pySCUBA has been installed successfully. More demos are in the `/demo/SCUBASketch/` folder.
+If there are no error messages, it indicates that the pySCUBA has been installed successfully. More demos are in the `/demo/SCUBASketch/` folder. It takes about 2 minutes to run the entire demo.

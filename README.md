@@ -1,6 +1,6 @@
 pySCUBA
 =========
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10938278.svg)](https://doi.org/10.5281/zenodo.10938278)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10939749.svg)](https://doi.org/10.5281/zenodo.10939749)
 
 pySCUBA is Python bindings to the SCUBA library. These can be built from the SCUBA source code. 
 
@@ -38,7 +38,8 @@ To install [lapack](https://github.com/Reference-LAPACK/lapack), we suggest buil
 
 We assume that the dynamic libraries `liblapacke.so` installed in` ~/.local/lapack/` if you follow the previous steps. However, if lapack installed in other path, your can to change the line in our CMakeLists.txt to your path:
 ```cmake
-# if install lapack in other enviroment ,change the line
+# if install lapack in other enviroment ,change the lines
+find_package(LAPACK REQUIRED)
 set(PythonLibs_LIBRARIES ${YOURPATH}/liblapacke.so)
 ```
 and make sure the file `lapacke.h`(Under the path `/lapack-3.10.1/LAPACKE/include/`) in `/usr/local/include`.

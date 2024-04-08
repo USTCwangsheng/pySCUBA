@@ -1,6 +1,6 @@
 pySCUBA
 =========
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10911359.svg)](https://doi.org/10.5281/zenodo.10911359)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10938278.svg)](https://doi.org/10.5281/zenodo.10938278)
 
 pySCUBA is Python bindings to the SCUBA library. These can be built from the SCUBA source code. 
 
